@@ -2,6 +2,13 @@
   <h3>Giphy App</h3>
   <hr />
   <div class="list-group list-reset">
-    <a class="list-group-item list-group-item-action" href="#"> Dashboard </a>
+    <a
+      *ngFor="let item of history"
+      class="list-group-item list-group-item-action"
+      href="#{{item}}"
+      (click)="searchHistory(item)"
+    >
+      {{ item | titlecase }}
+    </a>
   </div>
 </div>

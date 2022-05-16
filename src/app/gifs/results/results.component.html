@@ -1,1 +1,10 @@
-<p>results works!</p>
+<div class="row">
+  <div *ngFor="let gif of gifs" class="col-md-4 col-sm-6 col-xs-12 mb-2 animate__animated animate__fadeIn animate__faster">
+    <div class="card">
+      <img [src]="gif.images.downsized_medium.url" class='img-card img-fluid' [alt]="gif.title">
+      <div class="card-body">
+        <p class='card-text'>{{ gif.title }}</p>
+      </div>
+    </div>
+  </div>
+</div>
